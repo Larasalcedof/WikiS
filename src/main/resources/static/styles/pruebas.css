@@ -1,0 +1,95 @@
+/* pruebas.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  
+  header {
+    background-color: #52275a;
+    color: #e0e1dd;
+    padding: 1rem;
+  }
+  
+  nav a {
+    color: #e0e1dd;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #fff;
+  }
+  
+  main {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 2rem;
+  }
+  
+  .test-cases {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .test-case {
+    width: 48%;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .test-case h2 {
+    color: #52275a;
+  }
+  
+  .test-case p {
+    margin-bottom: 10px;
+  }
+  
+  .test-case ul {
+    padding-left: 20px;
+  }
+  
+  .test-case li {
+    margin-bottom: 8px;
+  }
+  
+  footer {
+    background-color: #52275a;
+    color: #e0e1dd;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h2 {
+    color: #52275a;
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  .card-content {
+    display: none;
+    padding: 1rem;
+  }
+  
+  .card.open .card-content {
+    display: block;
+  }
+  

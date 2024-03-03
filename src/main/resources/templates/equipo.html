@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/styles/equipo.css}">
+  <title>Presentación del Equipo</title>
+</head>
+<body>
+  <header style="background-color: #52275a; color: #e0e1dd; padding: 1rem;">
+    <h1>Nombre del Equipo</h1>
+    <nav>
+      <a th:href="@{/proyecto}">Proyecto</a>
+      <a th:href="@{/requerimientos}">Requerimientos</a>
+      <a th:href="@{/arquitectura}">Arquitectura</a>
+      <a th:href="@{/desarrollo}">Desarrollo</a>
+      <a th:href="@{/pruebas}">Pruebas</a>
+      <a th:href="@{/despliegue}">Despliegue</a>
+      <a th:href="@{/contacto}">Contáctenos</a>
+    </nav>
+  </header>
+  <main style="background-color: #f5f5f5; color: #333; padding: 2rem;">
+    <section class="team-members">
+      <div class="team-member" th:style="'background-color: #8a507e;'">
+        <div class="image-container">
+          <img th:src="@{/assets/images/kid2.jpg}" alt="Imagen del integrante">
+        </div>
+        <h2 style="color: #fff;">Nombre del Integrante</h2>
+        <p style="color: #fff;">Rol: Líder Técnico</p>
+        <p style="color: #fff;">Lenguajes: Java, JavaScript</p>
+        <p style="color: #fff;">Descripción del Perfil Técnico: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+      <div class="team-member with-image" th:style="'background-color: #8a507e;'">
+        <div class="image-container">
+          <img th:src="@{/assets/images/kid.jpg}" alt="Imagen del integrante">
+        </div>
+        <h2 style="color: #fff;">Nombre del Integrante</h2>
+        <p style="color: #fff;">Rol: Líder Técnico</p>
+        <p style="color: #fff;">Lenguajes: Java, JavaScript</p>
+        <p style="color: #fff;">Descripción del Perfil Técnico: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+      <div class="team-member with-image" th:style="'background-color: #8a507e;'">
+        <div class="image-container">
+          <img th:src="@{/assets/images/kid2.jpg}" alt="Imagen del integrante">
+        </div>
+        <h2 style="color: #fff;">Nombre del Integrante</h2>
+        <p style="color: #fff;">Rol: Líder Técnico</p>
+        <p style="color: #fff;">Lenguajes: Java, JavaScript</p>
+        <p style="color: #fff;">Descripción del Perfil Técnico: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+      <div class="team-member with-image" th:style="'background-color: #8a507e;'">
+        <div class="image-container">
+          <img th:src="@{/assets/images/kid.jpg}" alt="Imagen del integrante">
+        </div>
+        <h2 style="color: #fff;">Nombre del Integrante</h2>
+        <p style="color: #fff;">Rol: Líder Técnico</p>
+        <p style="color: #fff;">Lenguajes: Java, JavaScript</p>
+        <p style="color: #fff;">Descripción del Perfil Técnico: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+    </section>
+  </main>
+  <footer style="background-color: #52275a; color: #e0e1dd; text-align: center; padding: 1rem;">
+    <p>&copy; 2024 Equipo</p>
+  </footer>
+</body>
+</html>

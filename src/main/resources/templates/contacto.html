@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/styles/contacto.css}">
+  <title>Formulario</title>
+</head>
+
+<body>
+<header style="background-color: #52275a; color: #e0e1dd; padding: 1rem;">
+    <header style="background-color: #52275a; color: #e0e1dd; padding: 1rem;">
+        <h1>Nombre del Equipo</h1>
+        <nav>
+          <a th:href="@{/proyecto}">Proyecto</a>
+          <a th:href="@{/requerimientos}">Requerimientos</a>
+          <a th:href="@{/arquitectura}">Arquitectura</a>
+          <a th:href="@{/desarrollo}">Desarrollo</a>
+          <a th:href="@{/pruebas}">Pruebas</a>
+          <a th:href="@{/despliegue}">Despliegue</a>
+          <a th:href="@{/form}">Contáctenos</a>
+        </nav>
+</header>
+
+<section class="banner__container">
+    <div class="banner__container__description">
+        <h1>Formulario</h1>
+        <p>Llena el formulario con tu información por favor.</p>
+    </div>
+</section>
+
+<section class="form__container">
+    <div class="form__card">
+        <h1>Ponte en contacto</h1>
+        <form action="" class="form__questions">
+            <label class="form__label" for="">Nombres</label>
+            <input class="form__input" id="nombres" type="text" placeholder="Pablo"/>
+            <label class="form__label" for="">Apellidos</label>
+            <input class="form__input" id="appellidos" type="text" placeholder="Marquez"/>
+            <label class="form__label" for="">Correo</label>
+            <input class="form__input" id="correo" type="text" placeholder="JhonDoe@email.com"/>
+            <label class="form__label" for="">Semestre</label>
+            <input class="form__input" id="semestre" type="text" placeholder="Semestre entre 1 y 16"/>
+            <label class="form__label" for="">Descripción</label>
+            <textarea class="form__textarea" name="" id="descrpcion" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+            <button class="button__container" type="submit" id="submission">Enviar</button>
+        </form>
+    </div>
+</section>
+</body>
+
+<script th:src="@{/scripts/form.js}"></script>
+</html>

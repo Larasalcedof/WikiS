@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/styles/arquitectura.css}">
+  <title>Arquitectura del Proyecto</title>
+</head>
+<body>
+  <header style="background-color: #52275a; color: #e0e1dd; padding: 1rem;">
+    <h1>Arquitectura del Proyecto</h1>
+    <nav>
+      <a th:href="@{/equipo}">Equipo</a>
+      <a th:href="@{/proyecto}">Proyecto</a>
+      <a th:href="@{/requerimientos}">Requerimientos</a>
+      <a th:href="@{/desarrollo}">Desarrollo</a>
+      <a th:href="@{/pruebas}">Pruebas</a>
+      <a th:href="@{/despliegue}">Despliegue</a>
+      <a th:href="@{/contacto}">Contáctenos</a>
+    </nav>
+  </header>
+  <main style="background-color: #f5f5f5; color: #333; padding: 2rem;">
+    <section class="c4-diagrams">
+      <h2>Diagramas de Referencia C4</h2>
+      
+      <div class="pair context-diagram">
+        <h3>Diagrama de Contexto</h3>
+        <img th:src="@{/assets/images/ModeloConceptual.png}" alt="Diagrama del Contenedor">
+        <p>Texto descriptivo para el diagrama de contexto.</p>
+      </div>
+
+      <div class="pair container-diagram">
+        <h3>Diagrama del Contenedor</h3>
+        <img th:src="@{/assets/images/ModeloContenedores.png}" alt="Diagrama del Contenedor">
+        <p>Texto descriptivo para el diagrama del contenedor.</p>
+      </div>
+
+      <div class="pair component-diagram">
+        <h3>Diagrama de Componentes</h3>
+        <img th:src="@{/assets/images/ModeloComponentes.png}" alt="Diagrama del Contenedor">
+        <p>Texto descriptivo para el diagrama de componentes.</p>
+      </div>
+    </section>
+
+    <section class="models">
+      <h2>Modelos</h2>
+      <div class="pair entity-relation">
+        <h3>Entidad/Relación: Diccionario</h3>
+        <!-- Espacio para la imagen del modelo de entidad/relación -->
+        <p>Texto descriptivo para el modelo de entidad/relación.</p>
+      </div>
+    </section>
+
+    <section class="deployment-diagram">
+      <h2>Diagrama de Despliegue</h2>
+      <!-- Espacio para la imagen del diagrama de despliegue -->
+      <p>Texto descriptivo para el diagrama de despliegue.</p>
+    </section>
+  </main>
+  <footer style="background-color: #52275a; color: #e0e1dd; text-align: center; padding: 1rem;">
+    <p>&copy; 2024 Equipo</p>
+  </footer>
+</body>
+</html>

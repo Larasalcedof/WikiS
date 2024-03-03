@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link th:href="@{/styles/requerimientos.css}" rel="stylesheet">
+  <title>Requerimientos</title>
+</head>
+<body>
+  <header style="background-color: #52275a; color: #e0e1dd; padding: 1rem;">
+    <h1>Requerimientos</h1>
+    <nav>
+      <a th:href="@{/equipo1_4}">Equipo</a>
+      <a th:href="@{/proyecto}">Proyecto</a>
+      <a th:href="@{/arquitectura}">Arquitectura</a>
+      <a th:href="@{/desarrollo}">Desarrollo</a>
+      <a th:href="@{/pruebas}">Pruebas</a>
+      <a th:href="@{/despliegue}">Despliegue</a>
+      <a th:href="@{/contacto}">Contáctenos</a>
+    </nav>
+  </header>
+  <main style="background-color: #f5f5f5; color: #333; padding: 2rem;">
+    <section class="functional-requirements">
+        <h2>Requerimientos Funcionales</h2>
+      <!-- Historia de Usuario 1: Creación de cuenta (Usuario Arrendador) -->
+<div class="user-story-card">
+    <h3>HUA.1. Creación de cuenta</h3>
+    <p>Como un usuario arrendador, quiero poder crear una cuenta en el sistema para gestionar propiedades y realizar actividades relacionadas.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Al acceder al sistema por primera vez, se debe mostrar una opción clara para crear una cuenta de usuario arrendador.</li>
+      <li>Al hacer clic en "Crear cuenta", redirigir al usuario a un formulario de registro.</li>
+      <li>En el formulario de registro, solicitar la siguiente información:
+        <ul>
+          <li>Nombres (obligatorio)</li>
+          <li>Apellidos (obligatorio)</li>
+          <li>Correo electrónico (obligatorio)</li>
+          <li>Teléfono</li>
+          <li>Contraseña</li>
+        </ul>
+      </li>
+      <li>Validar que el correo electrónico corporativo sea único y válido.</li>
+      <li>Validar que el correo sea único y cumpla con las políticas de nomenclatura de la empresa.</li>
+      <li>La contraseña debe cumplir con requisitos de seguridad mínimos, como tener al menos 8 caracteres.</li>
+      <li>Después de enviar el formulario, mostrar una confirmación de que la cuenta ha sido creada con éxito, con un enlace para activar la cuenta.</li>
+      <li>En caso de ingresar información incorrecta o no válida, mostrar mensajes de error claros indicando cómo corregir los problemas.</li>
+      <li>Después de crear la cuenta y acceder al sistema, el usuario arrendador debe tener acceso a las herramientas y recursos necesarios.</li>
+    </ul>
+  </div>
+  
+
+      <div class="user-story-card">
+        <h3>HUA.2. Activación de cuenta</h3>
+        <p>Como un usuario arrendador, quiero activar mi cuenta para poder acceder a las herramientas y recursos necesarios para realizar las actividades del sistema.</p>
+        <h4>Criterios de Aceptación</h4>
+        <ul>
+          <li>Cuando me llegue el correo de activación, el usuario podrá hacer clic en un enlace y esto activará la cuenta y entrará al inicio de la cuenta para poder realizar sus actividades.</li>
+        </ul>
+      </div>
+      
+      <!-- Historia de Usuario 3: Autenticación de usuario -->
+      <div class="user-story-card">
+        <h3>HUA.3. Autenticación de usuario</h3>
+        <p>Como un usuario arrendador, quiero autenticarme en el sistema para poder acceder de forma segura a mi cuenta.</p>
+        <h4>Criterios de Aceptación</h4>
+        <ul>
+          <li>Al ingresar a cualquier página si no está autenticado, el sistema lo llevará a la página de autenticación.</li>
+          <li>El formulario de autenticación contendrá campos para el correo y la contraseña.</li>
+          <li>Al ingresar el formulario de forma correcta, el sistema lo llevará al inicio de sesión y, en caso contrario, mostrará un mensaje de error.</li>
+        </ul>
+      </div>
+      
+      <!-- Historia de Usuario 4: Ver mis propiedades -->
+      <div class="user-story-card">
+        <h3>HUA.4. Ver mis propiedades</h3>
+        <p>Como un usuario arrendador, quiero ver las propiedades que tengo a mi cargo para poder realizar las acciones que el sistema me permitirá.</p>
+        <h4>Criterios de Aceptación</h4>
+        <ul>
+          <li>Ingresar a la página y ver una lista/tabla con los detalles de las propiedades, incluyendo nombre, departamento, municipio y enlaces para editar y ver el detalle.</li>
+        </ul>
+      </div>
+
+    <!-- Historia de Usuario 5: Crear propiedad -->
+<div class="user-story-card">
+    <h3>HUA.5. Crear propiedad</h3>
+    <p>Como un usuario arrendador, quiero crear propiedades para poder arrendarlas.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Ingresar a la página donde puedo ver todas las propiedades.</li>
+      <li>Encontrar un botón que lleve al formulario de creación con información obligatoria como nombre, departamento, municipio, etc.</li>
+      <li>Verificar los datos, y en caso de éxito, ir a una página con la información de la propiedad; de lo contrario, mostrar un mensaje de error detallado.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 6: Editar propiedad -->
+  <div class="user-story-card">
+    <h3>HUA.6. Editar propiedad</h3>
+    <p>Como un usuario arrendador, quiero editar mis propiedades para poder arrendarlas y actualizar la información.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Ingresar a la página donde puedo ver todas las propiedades.</li>
+      <li>Encontrar un botón por cada propiedad o un enlace que permita ir al formulario de edición con datos básicos a modificar.</li>
+      <li>Verificar los datos, y en caso de éxito, ir a una página con la información actualizada de la propiedad; de lo contrario, mostrar un mensaje de error detallado.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 7: Subir foto de la propiedad -->
+  <div class="user-story-card">
+    <h3>HUA.7. Subir foto de la propiedad</h3>
+    <p>Como un usuario arrendador, quiero subir fotos de las propiedades para poder mostrarlas de mejor forma.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Ingresar a la página donde puedo ver todas las propiedades.</li>
+      <li>Encontrar un botón que lleve al formulario de subir foto.</li>
+      <li>Seleccionar una foto, subirla y luego ir a la página de la propiedad para ver la información.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 8: Desactivar propiedad -->
+  <div class="user-story-card">
+    <h3>HUA.8. Desactivar propiedad</h3>
+    <p>Como un usuario arrendador, quiero desactivar propiedades para que no me arrienden propiedades que ya no tengo en mi disposición.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Ingresar a la página donde puedo ver todas las propiedades.</li>
+      <li>Encontrar un botón que muestre un diálogo de confirmación para desactivar.</li>
+      <li>La propiedad desactivada no se elimina de la base de datos, pero no se podrá volver a ver.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 9: Ver solicitudes de arriendo -->
+  <div class="user-story-card">
+    <h3>HUA.9. Ver solicitudes de arriendo</h3>
+    <p>Como un usuario arrendador, quiero ver las solicitudes de arriendo para poder aceptar o rechazarlas.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Ingresar a la página donde puedo ver un listado de solicitudes de arriendo.</li>
+      <li>Ver un listado de solicitudes con información como nombre del solicitante, fechas, valor, estado, etc.</li>
+      <li>Tener botones para aceptar o rechazar las solicitudes dependiendo de su estado.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 10: Aceptar solicitud de arriendo -->
+  <div class="user-story-card">
+    <h3>HUA.10. Aceptar solicitud de arriendo</h3>
+    <p>Como un usuario arrendador, quiero aceptar la solicitud de arriendo para poder proceder con el arriendo.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Ver un botón de aceptar en las solicitudes que estén en estado "por aceptar".</li>
+      <li>Al hacer clic en aceptar, la solicitud pasa a estado "por pago".</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 11: Cancelar solicitud de arriendo -->
+  <div class="user-story-card">
+    <h3>HUA.11. Cancelar solicitud de arriendo</h3>
+    <p>Como un usuario arrendador, quiero cancelar la solicitud de arriendo para poder gestionar mis arriendos.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Ver un botón de cancelar en las solicitudes que estén en estado "por aceptar".</li>
+      <li>Al hacer clic en cancelar, la solicitud pasa a estado "cancelada".</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 12: Calificar arrendatario -->
+  <div class="user-story-card">
+    <h3>HUA.12. Calificar arrendatario</h3>
+    <p>Como un usuario arrendador, quiero calificar al arrendatario para poder evaluar la experiencia.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Ver la lista de solicitudes en estado "por calificar" después de la fecha de entrega.</li>
+      <li>Al hacer clic en calificar, ir a un formulario donde se pueda calificar y dejar un comentario.</li>
+      <li>Verificar que tanto el arrendador como el arrendatario hayan calificado para cambiar el estado a "cerrado".</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 13: Creación de cuenta (Usuario Arrendatario) -->
+<div class="user-story-card">
+    <h3>HUA.13. Creación de cuenta</h3>
+    <p>Como un usuario arrendatario, quiero poder crear una cuenta en el sistema para gestionar propiedades y realizar actividades relacionadas.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Al acceder al sistema por primera vez, se debe mostrar una opción clara para crear una cuenta de usuario.</li>
+      <li>Al hacer clic en "Crear cuenta", redirigir al usuario a un formulario de registro.</li>
+      <li>En el formulario de registro, solicitar la siguiente información:
+        <ul>
+          <li>Nombres (obligatorio)</li>
+          <li>Apellidos (obligatorio)</li>
+          <li>Correo electrónico (obligatorio)</li>
+          <li>Teléfono</li>
+          <li>Contraseña</li>
+        </ul>
+      </li>
+      <li>Validar que el correo electrónico sea único y válido.</li>
+      <li>Validar que el correo sea único y cumpla con las políticas de nomenclatura de la empresa.</li>
+      <li>La contraseña debe cumplir con requisitos de seguridad mínimos, como tener al menos 8 caracteres.</li>
+      <li>Después de enviar el formulario, mostrar una confirmación de que la cuenta ha sido creada con éxito, con un enlace para activar la cuenta.</li>
+      <li>En caso de ingresar información incorrecta o no válida, mostrar mensajes de error claros indicando cómo corregir los problemas.</li>
+      <li>Después de crear la cuenta y acceder al sistema, el usuario arrendatario debe tener acceso a las herramientas y recursos necesarios.</li>
+    </ul>
+  </div>
+  
+
+  <!-- Historia de Usuario 14: Activación de cuenta (Usuario Arrendatario) -->
+  <div class="user-story-card">
+    <h3>HUA.14. Activación de cuenta (Usuario Arrendatario)</h3>
+    <p>Como un usuario arrendatario, quiero activar mi cuenta para acceder a las herramientas y recursos necesarios.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Recibir un correo de activación con un enlace.</li>
+      <li>Hacer clic en el enlace para activar la cuenta y acceder al inicio de sesión.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 15: Autenticación (Usuario Arrendatario) -->
+  <div class="user-story-card">
+    <h3>HUA.15. Autenticación (Usuario Arrendatario)</h3>
+    <p>Como un usuario arrendatario, quiero autenticarme en el sistema para acceder de forma segura a mi cuenta.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Al ingresar a cualquier página sin autenticación, ser redirigido a la página de autenticación.</li>
+      <li>Completar un formulario de autenticación con correo y contraseña.</li>
+      <li>Acceder al inicio de sesión si la autenticación es exitosa, mostrar un mensaje de error en caso contrario.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 16: Buscar propiedades -->
+  <div class="user-story-card">
+    <h3>HUA.16. Buscar propiedades</h3>
+    <p>Como un usuario arrendatario, quiero buscar propiedades para solicitar el arriendo en fechas específicas.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Ingresar a un sitio con un listado de propiedades y un municipio predeterminado.</li>
+      <li>Realizar búsquedas por características como nombre, municipio y cantidad de personas.</li>
+      <li>Ver un listado con información básica y enlaces para ver detalles de la propiedad.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 17: Solicitar arriendo -->
+  <div class="user-story-card">
+    <h3>HUA.17. Solicitar arriendo</h3>
+    <p>Como un usuario arrendatario, quiero solicitar arriendo para realizar el proceso previo al pago del posible arriendo.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Encontrar un botón de solicitud al ver los detalles de la propiedad.</li>
+      <li>Llenar un formulario con fechas, cantidad de personas, etc.</li>
+      <li>Ir a la lista de solicitudes ordenada de más reciente a más antigua.</li>
+      <li>Mostrar un mensaje en caso de llenar el formulario incorrectamente.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 18: Ver solicitudes de arriendo (Usuario Arrendatario) -->
+  <div class="user-story-card">
+    <h3>HUA.18. Ver solicitudes de arriendo (Usuario Arrendatario)</h3>
+    <p>Como un usuario arrendatario, quiero ver mis solicitudes de arriendo para verificar su estado.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>Acceder al menú principal y verificar todas las solicitudes de reserva realizadas.</li>
+      <li>Ver un listado con detalles como nombre de la propiedad, fechas, valor, estado, etc.</li>
+      <li>Verificar la posibilidad de realizar pagos y calificaciones según el estado de la solicitud.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 19: Pagar arriendo -->
+<div class="user-story-card">
+    <h3>HUA.19. Pagar arriendo</h3>
+    <p>Como un usuario arrendatario, quiero pagar los arriendos para confirmar las reservas.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>En el listado de solicitudes de arriendo, cuando la solicitud esté en estado de "pago" y no esté vencida, mostrar un botón para realizar el pago.</li>
+      <li>Al hacer clic en el botón, abrir un formulario con los datos de pago, incluyendo el valor actualizado automáticamente.</li>
+      <li>El formulario debe incluir campos para el banco y el número de cuenta.</li>
+    </ul>
+  </div>
+  
+  <!-- Historia de Usuario 20: Calificar finca -->
+  <div class="user-story-card">
+    <h3>HUA.20. Calificar finca</h3>
+    <p>Como un usuario arrendatario, quiero calificar la finca para expresar mi experiencia y evaluar al arrendador.</p>
+    <h4>Criterios de Aceptación</h4>
+    <ul>
+      <li>En la lista de solicitudes, solo mostrar las solicitudes en estado "por calificar" y después de la fecha de entrega.</li>
+      <li>Mostrar un botón de calificar que lleve a un formulario con la opción de dejar un comentario.</li>
+      <li>Después de calificar, verificar que el usuario arrendador haya calificado tanto la finca como al arrendatario.</li>
+      <li>Si ambas partes han calificado, cambiar el estado a "cerrado"; de lo contrario, mantener el estado.</li>
+    </ul>
+  </div>
+  
+    </section>
+  </main>
+  <footer style="background-color: #52275a; color: #e0e1dd; padding: 1rem; text-align: center; position: absolute; bottom: 0; width: 100%;">
+    &copy; 2024 Equipo de Desarrollo
+  </footer>
+</body>
+</html>
