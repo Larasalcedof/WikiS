@@ -23,7 +23,7 @@ public class RutasController {
 
   @GetMapping("/arquitectura")
   public ModelAndView arquitectura() {
-    return new ModelAndView("arquitectura");
+    return new ModelAndView("arqui");
   }
 
   @GetMapping("/contacto")
