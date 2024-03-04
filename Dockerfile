@@ -11,4 +11,4 @@ WORKDIR /app
 RUN ./mvnw clean install -DskipTests
 
 # Comando para ejecutar la aplicación cuando se inicia el contenedor
-CMD ["java", "-jar", "target/wiki-0.0.1SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/wiki-0.0.1-SNAPSHOT.jar"]
