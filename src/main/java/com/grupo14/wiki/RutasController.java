@@ -31,6 +31,11 @@ public class RutasController {
     return new ModelAndView("arqui");
   }
 
+  @GetMapping("/prueba")
+  public ModelAndView prueba() {
+    return new ModelAndView("prueba");
+  }
+
   @GetMapping("/desarrollo")
   public ModelAndView desarrollo() {
     return new ModelAndView("desarrollo");
