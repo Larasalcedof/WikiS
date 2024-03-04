@@ -7,6 +7,9 @@ COPY . /app
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
+# Otorgar permisos al script
+RUN chmod +x mvnw
+
 # Expone el puerto en el que la aplicación escucha (ajusta según las necesidades de tu aplicación)
 RUN ./mvnw clean install -DskipTests
 
