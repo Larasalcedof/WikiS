@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class EquipoController {
 
-    @GetMapping("/equipo")
+    @GetMapping("/equipo1_4")
     public String equipo() {
         return "equipo";
     }
