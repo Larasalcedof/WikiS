@@ -6,13 +6,20 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.grupo14.wiki.Entities.Contacto;
+import com.grupo14.wiki.Repositories.ContactoRepository;
+
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/equipo-1-4")
 public class RutasController {
+
+    @Autowired
+    private ContactoRepository contactoRepository;
 
 
 
@@ -61,4 +68,30 @@ public class RutasController {
     return new ModelAndView("requerimientos");
   }
 
+  @PostMapping("/form")
+    public ModelAndView procesarFormulario(
+            @RequestParam("nombre") String nombre,
+            @RequestParam("apellidos") String apellidos,
+            @RequestParam("correo") String correo,
+            @RequestParam("semestre") int semestre,
+            @RequestParam("descripcion") String descripcion) {
+
+
+        // Crea un objeto Contacto y asigna los valores
+        Contacto contacto = new Contacto();
+        contacto.setNombre(nombre);
+        contacto.setApellidos(apellidos);
+        contacto.setCorreo(correo);
+        contacto.setSemestre(semestre);
+        contacto.setDescripcion(descripcion);
+
+        // Guarda el contacto en la base de datos
+        contactoRepository.save(contacto);
+
+        // Puedes agregar lógica adicional, redireccionar a otra página, etc.
+        return new ModelAndView("redirect:/equipo-1-4/contacto");
+    }
 }
+
+
+    

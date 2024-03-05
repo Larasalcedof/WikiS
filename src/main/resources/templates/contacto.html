@@ -1,53 +1,62 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" th:href="@{~/equipo-1-4/styles/contacto.css}">
-  <title>Formulario</title>
-</head>
+    <!DOCTYPE html>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{~/equipo-1-4/styles/contacto.css}">
+    <title>Formulario</title>
+    </head>
 
-<body>
-<header style="background-color: #52275a; color: #e0e1dd; padding: 1rem;">
+    <body>
     <header style="background-color: #52275a; color: #e0e1dd; padding: 1rem;">
-        <h1>Nombre del Equipooo</h1>
-        <nav>
-          <a th:href="@{/equipo-1-4}">Proyecto</a>
-          <a th:href="@{/equipo-1-4/requerimientos}">Requerimientos</a>
-          <a th:href="@{/equipo-1-4/arquitectura}">Arquitectura</a>
-          <a th:href="@{/equipo-1-4/desarrollo}">Desarrollo</a>
-          <a th:href="@{/equipo-1-4/pruebas}">Pruebas</a>
-          <a th:href="@{/equipo-1-4/despliegue}">Despliegue</a>
-          <a th:href="@{/equipo-1-4/form}">Contáctenos</a>
-        </nav>
-</header>
+        <header style="background-color: #52275a; color: #e0e1dd; padding: 1rem;">
+            <h1>Nombre del Equipooo</h1>
+            <nav>
+            <a th:href="@{/equipo-1-4}">Proyecto</a>
+            <a th:href="@{/equipo-1-4/requerimientos}">Requerimientos</a>
+            <a th:href="@{/equipo-1-4/arquitectura}">Arquitectura</a>
+            <a th:href="@{/equipo-1-4/desarrollo}">Desarrollo</a>
+            <a th:href="@{/equipo-1-4/pruebas}">Pruebas</a>
+            <a th:href="@{/equipo-1-4/despliegue}">Despliegue</a>
+            <a th:href="@{/equipo-1-4/contacto}">Contáctenos</a>
+            </nav>
+    </header>
 
-<section class="banner__container">
-    <div class="banner__container__description">
-        <h1>Formulario</h1>
-        <p>Llena el formulario con tu información por favor.</p>
-    </div>
-</section>
+    <section class="banner__container">
+        <div class="banner__container__description">
+            <h1>Formulario</h1>
+            <p>Llena el formulario con tu información por favor.</p>
+        </div>
+    </section>
 
-<section class="form__container">
-    <div class="form__card">
-        <h1>Ponte en contacto</h1>
-        <form action="" class="form__questions">
-            <label class="form__label" for="">Nombres</label>
-            <input class="form__input" id="nombres" type="text" placeholder="Pablo"/>
-            <label class="form__label" for="">Apellidos</label>
-            <input class="form__input" id="appellidos" type="text" placeholder="Marquez"/>
-            <label class="form__label" for="">Correo</label>
-            <input class="form__input" id="correo" type="text" placeholder="JhonDoe@email.com"/>
-            <label class="form__label" for="">Semestre</label>
-            <input class="form__input" id="semestre" type="text" placeholder="Semestre entre 1 y 16"/>
-            <label class="form__label" for="">Descripción</label>
-            <textarea class="form__textarea" name="" id="descrpcion" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
-            <button class="button__container" type="submit" id="submission">Enviar</button>
-        </form>
-    </div>
-</section>
-</body>
+    <section class="form__container">
+        <div class="form__card">
+            <h1>Ponte en contacto</h1>
+            <form action="/equipo-1-4/form" method="post" class="form__questions" onsubmit="return validateForm()">
+                <label class="form__label" for="nombres">Nombres</label>
+                <input class="form__input" id="nombres" name="nombre" type="text" placeholder="Pablo"/>
+            
+                <label class="form__label" for="appellidos">Apellidos</label>
+                <input class="form__input" id="apellidos" name="apellidos" type="text" placeholder="Marquez"/>
+            
+                <label class="form__label" for="correo">Correo</label>
+                <input class="form__input" id="correo" name="correo" type="text" placeholder="JhonDoe@email.com"/>
+            
+                <label class="form__label" for="semestre">Semestre</label>
+                <input class="form__input" id="semestre" name="semestre" type="text" placeholder="Semestre entre 1 y 16"/>
+            
+                <label class="form__label" for="descripcion">Descripción</label>
+                <textarea class="form__textarea" id="descripcion" name="descripcion" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+            
+                <button class="button__container" type="submit" id="submission">Enviar</button>
 
-<script th:src="@{/scripts/form.js}"></script>
-</html>
+            </form>
+            
+
+            
+        </div>
+    </section>
+    </body>
+
+    <script th:src="@{~/equipo-1-4/scripts/contacto.js}"></script>
+    </html>
