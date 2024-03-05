@@ -26,14 +26,14 @@ public class RutasController {
     return new ModelAndView("contacto");
   }
 
-  @GetMapping("/arqui")
-  public ModelAndView arqui() {
-    return new ModelAndView("arqui");
-  }
-
-  @GetMapping("/prueba")
+  @GetMapping("/arq")
   public ModelAndView prueba() {
     return new ModelAndView("prueba");
+  }
+
+  @GetMapping("/arquitectura")
+  public ModelAndView arqui() {
+    return new ModelAndView("arqui");
   }
 
   @GetMapping("/desarrollo")
