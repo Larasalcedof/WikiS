@@ -29,65 +29,1143 @@
     <section class="test-cases">
       <div class="test-case">
         <div class="card" onclick="toggleCard(this)">
-          <h2>Ejemplo prueba Frontend</h2>
-          <div class="card-content">
-            <p>Prueba Lorem Ipsum</p>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </li>
-            </ul>
-          </div>
+            <h2>Pruebas Usuario</h2>
+            <div class="card-content">
+                <h3>Usuario Controller</h3>
+                <p>Constructor</p>
+                <ul>
+                    <li>Identificador de la prueba: testConstructor</li>
+                    <li>Título: Constructor</li>
+                    <li>Descripción: Se prueba que el constructor de UsuarioController se cree correctamente.</li>
+                    <li>Dependencias de las pruebas: N/A</li>
+                    <li>Resultado: Se espera que el constructor no sea nulo.</li>
+                </ul>
+                <p>getAllUsuarios</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetAllUsuarios</li>
+                    <li>Título: getAllUsuarios</li>
+                    <li>Descripción: Se prueba que el método getAllUsuarios devuelva una lista de usuarios.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y la lista de usuarios.</li>
+                </ul>
+                <p>getUsuarioById</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetUsuarioById</li>
+                    <li>Título: getUsuarioById</li>
+                    <li>Descripción: Se prueba que el método getUsuarioById devuelva un usuario por su ID.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y el usuario correspondiente.</li>
+                </ul>
+                <p>getUsuarioById - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetUsuarioById_NotFound</li>
+                    <li>Título: getUsuarioById - Not Found</li>
+                    <li>Descripción: Se prueba que el método getUsuarioById devuelva un código de estado Not Found cuando el usuario no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                </ul>
+                <p>createUsuario</p>
+                <ul>
+                    <li>Identificador de la prueba: testCreateUsuario</li>
+                    <li>Título: createUsuario</li>
+                    <li>Descripción: Se prueba que el método createUsuario cree un nuevo usuario correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Created y el usuario creado.</li>
+                </ul>
+                <p>updateUsuario</p>
+                <ul>
+                    <li>Identificador de la prueba: testUpdateUsuario</li>
+                    <li>Título: updateUsuario</li>
+                    <li>Descripción: Se prueba que el método updateUsuario actualice un usuario existente correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y el usuario actualizado.</li>
+                </ul>
+                <p>updateUsuario - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testUpdateUsuario_NotFound</li>
+                    <li>Título: updateUsuario - Not Found</li>
+                    <li>Descripción: Se prueba que el método updateUsuario devuelva un código de estado Not Found cuando el usuario no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                </ul>
+                <p>deleteUsuario</p>
+                <ul>
+                    <li>Identificador de la prueba: testDeleteUsuario</li>
+                    <li>Título: deleteUsuario</li>
+                    <li>Descripción: Se prueba que el método deleteUsuario elimine un usuario correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado No Content.</li>
+                </ul>
+                <p>deleteUsuario - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testDeleteUsuario_NotFound</li>
+                    <li>Título: deleteUsuario - Not Found</li>
+                    <li>Descripción: Se prueba que el método deleteUsuario devuelva un código de estado Not Found cuando el usuario no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                    <h3>UsuarioService</h3>
+                    <p>findById - Usuario existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindById_Exists</li>
+                        <li>Título: findById - Usuario existente</li>
+                        <li>Descripción: Se prueba que el método findById encuentre un usuario existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva un usuario existente.</li>
+                    </ul>
+                    <p>findById - Usuario no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindById_NotExists</li>
+                        <li>Título: findById - Usuario no existente</li>
+                        <li>Descripción: Se prueba que el método findById devuelva null cuando no se encuentra ningún usuario.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva null.</li>
+                    </ul>
+                    <p>findAll</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindAll</li>
+                        <li>Título: findAll</li>
+                        <li>Descripción: Se prueba que el método findAll devuelva una lista de usuarios.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva una lista de usuarios.</li>
+                    </ul>
+                    <p>save</p>
+                    <ul>
+                        <li>Identificador de la prueba: testSave</li>
+                        <li>Título: save</li>
+                        <li>Descripción: Se prueba que el método save guarde un nuevo usuario correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva el usuario guardado.</li>
+                    </ul>
+                    <p>update - Usuario existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testUpdate_Exists</li>
+                        <li>Título: update - Usuario existente</li>
+                        <li>Descripción: Se prueba que el método update actualice un usuario existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva el usuario actualizado.</li>
+                    </ul>
+                    <p>update - Usuario no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testUpdate_NotExists</li>
+                        <li>Título: update - Usuario no existente</li>
+                        <li>Descripción: Se prueba que el método update devuelva null cuando el usuario no existe.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva null.</li>
+                    </ul>
+                    <p>delete - Usuario existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testDelete_Exists</li>
+                        <li>Título: delete - Usuario existente</li>
+                        <li>Descripción: Se prueba que el método delete elimine un usuario existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva verdadero.</li>
+                    </ul>
+                    <p>delete - Usuario no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testDelete_NotExists</li>
+                        <li>Título: delete - Usuario no existente</li>
+                        <li>Descripción: Se prueba que el método delete devuelva falso cuando el usuario no existe.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva falso.</li>
+                    </ul>
+                    <h3>UsuarioDTO</h3>
+                    <!-- Otras pruebas -->
+                    <p>fromEntity</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFromEntity</li>
+                        <li>Título: fromEntity</li>
+                        <li>Descripción: Se prueba que el método fromEntity convierta correctamente una entidad Usuario a DTO.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva un DTO con los mismos valores que la entidad.</li>
+                    </ul>
+                    <h3>testToEntity</h3>
+                    <p>toEntity</p>
+                    <ul>
+                        <li>Identificador de la prueba: testToEntity</li>
+                        <li>Título: toEntity</li>
+                        <li>Descripción: Se prueba que el método toEntity convierta correctamente un DTO Usuario a entidad.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva una entidad con los mismos valores que el DTO.</li>
+                    </ul>
+                    <h3>Usuario</h3>
+                    <p>Getters y Setters</p>
+                    <ul>
+                        <li>Identificador de la prueba: testGettersAndSetters</li>
+                        <li>Título: Getters y Setters</li>
+                        <li>Descripción: Se prueba que los getters y setters de la clase Usuario funcionen correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que los getters y setters funcionen correctamente.</li>
+                    </ul>
+                    <p>NoArgsConstructor</p>
+                    <ul>
+                        <li>Identificador de la prueba: testNoArgsConstructor</li>
+                        <li>Título: NoArgsConstructor</li>
+                        <li>Descripción: Se prueba que el constructor sin argumentos de la clase Usuario funcione correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el constructor sin argumentos funcione correctamente.</li>
+                    </ul>
+                    <p>AllArgsConstructor</p>
+                    <ul>
+                        <li>Identificador de la prueba: testAllArgsConstructor</li>
+                        <li>Título: AllArgsConstructor</li>
+                        <li>Descripción: Se prueba que el constructor con todos los argumentos de la clase Usuario funcione correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el constructor con todos los argumentos funcione correctamente.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
+    
   
-      <div class="test-case">
-        <div class="card" onclick="toggleCard(this)">
-          <h2>Ejemplo prueba Backend</h2>
-          <div class="card-content">
-            <p>Prueba Lorem Ipsum</p>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </li>
-            </ul>
+        <div class="test-case">
+          <div class="card" onclick="toggleCard(this)">
+              <h2>Pruebas Credencial</h2>
+              <div class="card-content">
+                  <h3>Credencial Controller</h3>
+                  <p>Constructor</p>
+                  <ul>
+                      <li>Identificador de la prueba: testConstructor</li>
+                      <li>Título: Constructor</li>
+                      <li>Descripción: Se prueba que el constructor de CredencialController se cree correctamente.</li>
+                      <li>Dependencias de las pruebas: N/A</li>
+                      <li>Resultado: Se espera que el constructor no sea nulo.</li>
+                  </ul>
+                  <p>getAllCredenciales</p>
+                  <ul>
+                      <li>Identificador de la prueba: testGetAllCredenciales</li>
+                      <li>Título: getAllCredenciales</li>
+                      <li>Descripción: Se prueba que el método getAllCredenciales devuelva una lista de credenciales.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado OK y la lista de credenciales.</li>
+                  </ul>
+                  <p>getCredencialById</p>
+                  <ul>
+                      <li>Identificador de la prueba: testGetCredencialById</li>
+                      <li>Título: getCredencialById</li>
+                      <li>Descripción: Se prueba que el método getCredencialById devuelva un credencial por su ID.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado OK y el credencial correspondiente.</li>
+                  </ul>
+                  <p>getCredencialById - Not Found</p>
+                  <ul>
+                      <li>Identificador de la prueba: testGetCredencialById_NotFound</li>
+                      <li>Título: getCredencialById - Not Found</li>
+                      <li>Descripción: Se prueba que el método getCredencialById devuelva un código de estado Not Found cuando el credencial no se encuentra.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                  </ul>
+                  <p>createCredencial</p>
+                  <ul>
+                      <li>Identificador de la prueba: testCreateCredencial</li>
+                      <li>Título: createCredencial</li>
+                      <li>Descripción: Se prueba que el método createCredencial cree un nuevo credencial correctamente.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Created y el credencial creado.</li>
+                  </ul>
+                  <p>updateCredencial</p>
+                  <ul>
+                      <li>Identificador de la prueba: testUpdateCredencial</li>
+                      <li>Título: updateCredencial</li>
+                      <li>Descripción: Se prueba que el método updateCredencial actualice un credencial existente correctamente.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado OK y el credencial actualizado.</li>
+                  </ul>
+                  <p>updateCredencial - Not Found</p>
+                  <ul>
+                      <li>Identificador de la prueba: testUpdateCredencial_NotFound</li>
+                      <li>Título: updateCredencial - Not Found</li>
+                      <li>Descripción: Se prueba que el método updateCredencial devuelva un código de estado Not Found cuando el credencial no se encuentra.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                  </ul>
+                  <p>deleteCredencial</p>
+                  <ul>
+                      <li>Identificador de la prueba: testDeleteCredencial</li>
+                      <li>Título: deleteCredencial</li>
+                      <li>Descripción: Se prueba que el método deleteCredencial elimine un credencial correctamente.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado No Content.</li>
+                  </ul>
+                  <p>deleteCredencial - Not Found</p>
+                  <ul>
+                      <li>Identificador de la prueba: testDeleteCredencial_NotFound</li>
+                      <li>Título: deleteCredencial - Not Found</li>
+                      <li>Descripción: Se prueba que el método deleteCredencial devuelva un código de estado Not Found cuando el credencial no se encuentra.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                      <h3>CredencialService</h3>
+                      <p>findById - Credencial existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFindById_Exists</li>
+                          <li>Título: findById - Credencial existente</li>
+                          <li>Descripción: Se prueba que el método findById encuentre un credencial existente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva un credencial existente.</li>
+                      </ul>
+                      <p>findById - Credencial no existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFindById_NotExists</li>
+                          <li>Título: findById - Credencial no existente</li>
+                          <li>Descripción: Se prueba que el método findById devuelva null cuando no se encuentra ningún credencial.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva null.</li>
+                      </ul>
+                      <p>findAll</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFindAll</li>
+                          <li>Título: findAll</li>
+                          <li>Descripción: Se prueba que el método findAll devuelva una lista de credenciales.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva una lista de credenciales.</li>
+                      </ul>
+                      <p>save</p>
+                      <ul>
+                          <li>Identificador de la prueba: testSave</li>
+                          <li>Título: save</li>
+                          <li>Descripción: Se prueba que el método save guarde un nuevo credencial correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva el credencial guardado.</li>
+                      </ul>
+                      <p>update - Credencial existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testUpdate_Exists</li>
+                          <li>Título: update - Credencial existente</li>
+                          <li>Descripción: Se prueba que el método update actualice un credencial existente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva el credencial actualizado.</li>
+                      </ul>
+                      <p>update - Credencial no existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testUpdate_NotExists</li>
+                          <li>Título: update - Credencial no existente</li>
+                          <li>Descripción: Se prueba que el método update devuelva null cuando el credencial no existe.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva null.</li>
+                      </ul>
+                      <p>delete - Credencial existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testDelete_Exists</li>
+                          <li>Título: delete - Credencial existente</li>
+                          <li>Descripción: Se prueba que el método delete elimine un credencial existente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva verdadero.</li>
+                      </ul>
+                      <p>delete - Credencial no existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testDelete_NotExists</li>
+                          <li>Título: delete - Credencial no existente</li>
+                          <li>Descripción: Se prueba que el método delete devuelva falso cuando el credencial no existe.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva falso.</li>
+                      </ul>
+                      <h3>CredencialDTO</h3>
+                      <!-- Otras pruebas -->
+                      <p>fromEntity</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFromEntity</li>
+                          <li>Título: fromEntity</li>
+                          <li>Descripción: Se prueba que el método fromEntity convierta correctamente una entidad Credencial a DTO.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva un DTO con los mismos valores que la entidad.</li>
+                      </ul>
+                      <h3>testToEntity</h3>
+                      <p>toEntity</p>
+                      <ul>
+                          <li>Identificador de la prueba: testToEntity</li>
+                          <li>Título: toEntity</li>
+                          <li>Descripción: Se prueba que el método toEntity convierta correctamente un DTO Credencial a entidad.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva una entidad con los mismos valores que el DTO.</li>
+                      </ul>
+                      <h3>Credencial</h3>
+                      <p>Getters y Setters</p>
+                      <ul>
+                          <li>Identificador de la prueba: testGettersAndSetters</li>
+                          <li>Título: Getters y Setters</li>
+                          <li>Descripción: Se prueba que los getters y setters de la clase Credencial funcionen correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que los getters y setters funcionen correctamente.</li>
+                      </ul>
+                      <p>NoArgsConstructor</p>
+                      <ul>
+                          <li>Identificador de la prueba: testNoArgsConstructor</li>
+                          <li>Título: NoArgsConstructor</li>
+                          <li>Descripción: Se prueba que el constructor sin argumentos de la clase Credencial funcione correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el constructor sin argumentos funcione correctamente.</li>
+                      </ul>
+                      <p>AllArgsConstructor</p>
+                      <ul>
+                          <li>Identificador de la prueba: testAllArgsConstructor</li>
+                          <li>Título: AllArgsConstructor</li>
+                          <li>Descripción: Se prueba que el constructor con todos los argumentos de la clase Credencial funcione correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el constructor con todos los argumentos funcione correctamente.</li>
+                      </ul>
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
     </section>
 
     <section class="test-cases">
       <div class="test-case">
         <div class="card" onclick="toggleCard(this)">
-          <h2>Ejemplo prueba Frontend 2</h2>
-          <div class="card-content">
-            <p>Prueba Lorem Ipsum</p>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </li>
-            </ul>
-          </div>
+            <h2>Pruebas Propiedad</h2>
+            <div class="card-content">
+                <h3>Propiedad Controller</h3>
+                <p>Constructor</p>
+                <ul>
+                    <li>Identificador de la prueba: testConstructor</li>
+                    <li>Título: Constructor</li>
+                    <li>Descripción: Se prueba que el constructor de PropiedadController se cree correctamente.</li>
+                    <li>Dependencias de las pruebas: N/A</li>
+                    <li>Resultado: Se espera que el constructor no sea nulo.</li>
+                </ul>
+                <p>getAllPropiedades</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetAllPropiedades</li>
+                    <li>Título: getAllPropiedades</li>
+                    <li>Descripción: Se prueba que el método getAllPropiedades devuelva una lista de propiedades.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y la lista de propiedades.</li>
+                </ul>
+                <p>getPropiedadById</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetPropiedadById</li>
+                    <li>Título: getPropiedadById</li>
+                    <li>Descripción: Se prueba que el método getPropiedadById devuelva un propiedad por su ID.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y el propiedad correspondiente.</li>
+                </ul>
+                <p>getPropiedadById - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetPropiedadById_NotFound</li>
+                    <li>Título: getPropiedadById - Not Found</li>
+                    <li>Descripción: Se prueba que el método getPropiedadById devuelva un código de estado Not Found cuando el propiedad no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                </ul>
+                <p>createPropiedad</p>
+                <ul>
+                    <li>Identificador de la prueba: testCreatePropiedad</li>
+                    <li>Título: createPropiedad</li>
+                    <li>Descripción: Se prueba que el método createPropiedad cree un nuevo propiedad correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Created y el propiedad creado.</li>
+                </ul>
+                <p>updatePropiedad</p>
+                <ul>
+                    <li>Identificador de la prueba: testUpdatePropiedad</li>
+                    <li>Título: updatePropiedad</li>
+                    <li>Descripción: Se prueba que el método updatePropiedad actualice un propiedad existente correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y el propiedad actualizado.</li>
+                </ul>
+                <p>updatePropiedad - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testUpdatePropiedad_NotFound</li>
+                    <li>Título: updatePropiedad - Not Found</li>
+                    <li>Descripción: Se prueba que el método updatePropiedad devuelva un código de estado Not Found cuando el propiedad no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                </ul>
+                <p>deletePropiedad</p>
+                <ul>
+                    <li>Identificador de la prueba: testDeletePropiedad</li>
+                    <li>Título: deletePropiedad</li>
+                    <li>Descripción: Se prueba que el método deletePropiedad elimine un propiedad correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado No Content.</li>
+                </ul>
+                <p>deletePropiedad - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testDeletePropiedad_NotFound</li>
+                    <li>Título: deletePropiedad - Not Found</li>
+                    <li>Descripción: Se prueba que el método deletePropiedad devuelva un código de estado Not Found cuando el propiedad no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                    <h3>PropiedadService</h3>
+                    <p>findById - Propiedad existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindById_Exists</li>
+                        <li>Título: findById - Propiedad existente</li>
+                        <li>Descripción: Se prueba que el método findById encuentre un propiedad existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva un propiedad existente.</li>
+                    </ul>
+                    <p>findById - Propiedad no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindById_NotExists</li>
+                        <li>Título: findById - Propiedad no existente</li>
+                        <li>Descripción: Se prueba que el método findById devuelva null cuando no se encuentra ningún propiedad.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva null.</li>
+                    </ul>
+                    <p>findAll</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindAll</li>
+                        <li>Título: findAll</li>
+                        <li>Descripción: Se prueba que el método findAll devuelva una lista de propiedades.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva una lista de propiedades.</li>
+                    </ul>
+                    <p>save</p>
+                    <ul>
+                        <li>Identificador de la prueba: testSave</li>
+                        <li>Título: save</li>
+                        <li>Descripción: Se prueba que el método save guarde un nuevo propiedad correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva el propiedad guardado.</li>
+                    </ul>
+                    <p>update - Propiedad existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testUpdate_Exists</li>
+                        <li>Título: update - Propiedad existente</li>
+                        <li>Descripción: Se prueba que el método update actualice un propiedad existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva el propiedad actualizado.</li>
+                    </ul>
+                    <p>update - Propiedad no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testUpdate_NotExists</li>
+                        <li>Título: update - Propiedad no existente</li>
+                        <li>Descripción: Se prueba que el método update devuelva null cuando el propiedad no existe.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva null.</li>
+                    </ul>
+                    <p>delete - Propiedad existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testDelete_Exists</li>
+                        <li>Título: delete - Propiedad existente</li>
+                        <li>Descripción: Se prueba que el método delete elimine un propiedad existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva verdadero.</li>
+                    </ul>
+                    <p>delete - Propiedad no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testDelete_NotExists</li>
+                        <li>Título: delete - Propiedad no existente</li>
+                        <li>Descripción: Se prueba que el método delete devuelva falso cuando el propiedad no existe.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva falso.</li>
+                    </ul>
+                    <h3>PropiedadDTO</h3>
+                    <!-- Otras pruebas -->
+                    <p>fromEntity</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFromEntity</li>
+                        <li>Título: fromEntity</li>
+                        <li>Descripción: Se prueba que el método fromEntity convierta correctamente una entidad Propiedad a DTO.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva un DTO con los mismos valores que la entidad.</li>
+                    </ul>
+                    <h3>testToEntity</h3>
+                    <p>toEntity</p>
+                    <ul>
+                        <li>Identificador de la prueba: testToEntity</li>
+                        <li>Título: toEntity</li>
+                        <li>Descripción: Se prueba que el método toEntity convierta correctamente un DTO Propiedad a entidad.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva una entidad con los mismos valores que el DTO.</li>
+                    </ul>
+                    <h3>Propiedad</h3>
+                    <p>Getters y Setters</p>
+                    <ul>
+                        <li>Identificador de la prueba: testGettersAndSetters</li>
+                        <li>Título: Getters y Setters</li>
+                        <li>Descripción: Se prueba que los getters y setters de la clase Propiedad funcionen correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que los getters y setters funcionen correctamente.</li>
+                    </ul>
+                    <p>NoArgsConstructor</p>
+                    <ul>
+                        <li>Identificador de la prueba: testNoArgsConstructor</li>
+                        <li>Título: NoArgsConstructor</li>
+                        <li>Descripción: Se prueba que el constructor sin argumentos de la clase Propiedad funcione correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el constructor sin argumentos funcione correctamente.</li>
+                    </ul>
+                    <p>AllArgsConstructor</p>
+                    <ul>
+                        <li>Identificador de la prueba: testAllArgsConstructor</li>
+                        <li>Título: AllArgsConstructor</li>
+                        <li>Descripción: Se prueba que el constructor con todos los argumentos de la clase Propiedad funcione correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el constructor con todos los argumentos funcione correctamente.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
 
+        <div class="test-case">
+          <div class="card" onclick="toggleCard(this)">
+              <h2>Pruebas Pago</h2>
+              <div class="card-content">
+                  <h3>Pago Controller</h3>
+                  <p>Constructor</p>
+                  <ul>
+                      <li>Identificador de la prueba: testConstructor</li>
+                      <li>Título: Constructor</li>
+                      <li>Descripción: Se prueba que el constructor de PagoController se cree correctamente.</li>
+                      <li>Dependencias de las pruebas: N/A</li>
+                      <li>Resultado: Se espera que el constructor no sea nulo.</li>
+                  </ul>
+                  <p>getAllPagos</p>
+                  <ul>
+                      <li>Identificador de la prueba: testGetAllPagos</li>
+                      <li>Título: getAllPagos</li>
+                      <li>Descripción: Se prueba que el método getAllPagos devuelva una lista de pagos.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado OK y la lista de pagos.</li>
+                  </ul>
+                  <p>getPagoById</p>
+                  <ul>
+                      <li>Identificador de la prueba: testGetPagoById</li>
+                      <li>Título: getPagoById</li>
+                      <li>Descripción: Se prueba que el método getPagoById devuelva un pago por su ID.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado OK y el pago correspondiente.</li>
+                  </ul>
+                  <p>getPagoById - Not Found</p>
+                  <ul>
+                      <li>Identificador de la prueba: testGetPagoById_NotFound</li>
+                      <li>Título: getPagoById - Not Found</li>
+                      <li>Descripción: Se prueba que el método getPagoById devuelva un código de estado Not Found cuando el pago no se encuentra.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                  </ul>
+                  <p>createPago</p>
+                  <ul>
+                      <li>Identificador de la prueba: testCreatePago</li>
+                      <li>Título: createPago</li>
+                      <li>Descripción: Se prueba que el método createPago cree un nuevo pago correctamente.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Created y el pago creado.</li>
+                  </ul>
+                  <p>updatePago</p>
+                  <ul>
+                      <li>Identificador de la prueba: testUpdatePago</li>
+                      <li>Título: updatePago</li>
+                      <li>Descripción: Se prueba que el método updatePago actualice un pago existente correctamente.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado OK y el pago actualizado.</li>
+                  </ul>
+                  <p>updatePago - Not Found</p>
+                  <ul>
+                      <li>Identificador de la prueba: testUpdatePago_NotFound</li>
+                      <li>Título: updatePago - Not Found</li>
+                      <li>Descripción: Se prueba que el método updatePago devuelva un código de estado Not Found cuando el pago no se encuentra.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                  </ul>
+                  <p>deletePago</p>
+                  <ul>
+                      <li>Identificador de la prueba: testDeletePago</li>
+                      <li>Título: deletePago</li>
+                      <li>Descripción: Se prueba que el método deletePago elimine un pago correctamente.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado No Content.</li>
+                  </ul>
+                  <p>deletePago - Not Found</p>
+                  <ul>
+                      <li>Identificador de la prueba: testDeletePago_NotFound</li>
+                      <li>Título: deletePago - Not Found</li>
+                      <li>Descripción: Se prueba que el método deletePago devuelva un código de estado Not Found cuando el pago no se encuentra.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                      <h3>PagoService</h3>
+                      <p>findById - Pago existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFindById_Exists</li>
+                          <li>Título: findById - Pago existente</li>
+                          <li>Descripción: Se prueba que el método findById encuentre un pago existente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva un pago existente.</li>
+                      </ul>
+                      <p>findById - Pago no existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFindById_NotExists</li>
+                          <li>Título: findById - Pago no existente</li>
+                          <li>Descripción: Se prueba que el método findById devuelva null cuando no se encuentra ningún pago.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva null.</li>
+                      </ul>
+                      <p>findAll</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFindAll</li>
+                          <li>Título: findAll</li>
+                          <li>Descripción: Se prueba que el método findAll devuelva una lista de pagos.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva una lista de pagos.</li>
+                      </ul>
+                      <p>save</p>
+                      <ul>
+                          <li>Identificador de la prueba: testSave</li>
+                          <li>Título: save</li>
+                          <li>Descripción: Se prueba que el método save guarde un nuevo pago correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva el pago guardado.</li>
+                      </ul>
+                      <p>update - Pago existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testUpdate_Exists</li>
+                          <li>Título: update - Pago existente</li>
+                          <li>Descripción: Se prueba que el método update actualice un pago existente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva el pago actualizado.</li>
+                      </ul>
+                      <p>update - Pago no existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testUpdate_NotExists</li>
+                          <li>Título: update - Pago no existente</li>
+                          <li>Descripción: Se prueba que el método update devuelva null cuando el pago no existe.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva null.</li>
+                      </ul>
+                      <p>delete - Pago existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testDelete_Exists</li>
+                          <li>Título: delete - Pago existente</li>
+                          <li>Descripción: Se prueba que el método delete elimine un pago existente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva verdadero.</li>
+                      </ul>
+                      <p>delete - Pago no existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testDelete_NotExists</li>
+                          <li>Título: delete - Pago no existente</li>
+                          <li>Descripción: Se prueba que el método delete devuelva falso cuando el pago no existe.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva falso.</li>
+                      </ul>
+                      <h3>PagoDTO</h3>
+                      <!-- Otras pruebas -->
+                      <p>fromEntity</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFromEntity</li>
+                          <li>Título: fromEntity</li>
+                          <li>Descripción: Se prueba que el método fromEntity convierta correctamente una entidad Pago a DTO.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva un DTO con los mismos valores que la entidad.</li>
+                      </ul>
+                      <h3>testToEntity</h3>
+                      <p>toEntity</p>
+                      <ul>
+                          <li>Identificador de la prueba: testToEntity</li>
+                          <li>Título: toEntity</li>
+                          <li>Descripción: Se prueba que el método toEntity convierta correctamente un DTO Pago a entidad.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva una entidad con los mismos valores que el DTO.</li>
+                      </ul>
+                      <h3>Pago</h3>
+                      <p>Getters y Setters</p>
+                      <ul>
+                          <li>Identificador de la prueba: testGettersAndSetters</li>
+                          <li>Título: Getters y Setters</li>
+                          <li>Descripción: Se prueba que los getters y setters de la clase Pago funcionen correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que los getters y setters funcionen correctamente.</li>
+                      </ul>
+                      <p>NoArgsConstructor</p>
+                      <ul>
+                          <li>Identificador de la prueba: testNoArgsConstructor</li>
+                          <li>Título: NoArgsConstructor</li>
+                          <li>Descripción: Se prueba que el constructor sin argumentos de la clase Pago funcione correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el constructor sin argumentos funcione correctamente.</li>
+                      </ul>
+                      <p>AllArgsConstructor</p>
+                      <ul>
+                          <li>Identificador de la prueba: testAllArgsConstructor</li>
+                          <li>Título: AllArgsConstructor</li>
+                          <li>Descripción: Se prueba que el constructor con todos los argumentos de la clase Pago funcione correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el constructor con todos los argumentos funcione correctamente.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+  
+    </section>
+    <section class = "test-cases">
       <div class="test-case">
         <div class="card" onclick="toggleCard(this)">
-          <h2>Ejemplo prueba Frontend 2</h2>
-          <div class="card-content">
-            <p>Prueba Lorem Ipsum</p>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </li>
-            </ul>
-          </div>
+            <h2>Pruebas Calificacion</h2>
+            <div class="card-content">
+                <h3>Calificacion Controller</h3>
+                <p>Constructor</p>
+                <ul>
+                    <li>Identificador de la prueba: testConstructor</li>
+                    <li>Título: Constructor</li>
+                    <li>Descripción: Se prueba que el constructor de CalificacionController se cree correctamente.</li>
+                    <li>Dependencias de las pruebas: N/A</li>
+                    <li>Resultado: Se espera que el constructor no sea nulo.</li>
+                </ul>
+                <p>getAllCalificaciones</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetAllCalificaciones</li>
+                    <li>Título: getAllCalificaciones</li>
+                    <li>Descripción: Se prueba que el método getAllCalificaciones devuelva una lista de calificaciones.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y la lista de calificaciones.</li>
+                </ul>
+                <p>getCalificacionById</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetCalificacionById</li>
+                    <li>Título: getCalificacionById</li>
+                    <li>Descripción: Se prueba que el método getCalificacionById devuelva un calificacion por su ID.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y el calificacion correspondiente.</li>
+                </ul>
+                <p>getCalificacionById - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetCalificacionById_NotFound</li>
+                    <li>Título: getCalificacionById - Not Found</li>
+                    <li>Descripción: Se prueba que el método getCalificacionById devuelva un código de estado Not Found cuando el calificacion no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                </ul>
+                <p>createCalificacion</p>
+                <ul>
+                    <li>Identificador de la prueba: testCreateCalificacion</li>
+                    <li>Título: createCalificacion</li>
+                    <li>Descripción: Se prueba que el método createCalificacion cree un nuevo calificacion correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Created y el calificacion creado.</li>
+                </ul>
+                <p>updateCalificacion</p>
+                <ul>
+                    <li>Identificador de la prueba: testUpdateCalificacion</li>
+                    <li>Título: updateCalificacion</li>
+                    <li>Descripción: Se prueba que el método updateCalificacion actualice un calificacion existente correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y el calificacion actualizado.</li>
+                </ul>
+                <p>updateCalificacion - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testUpdateCalificacion_NotFound</li>
+                    <li>Título: updateCalificacion - Not Found</li>
+                    <li>Descripción: Se prueba que el método updateCalificacion devuelva un código de estado Not Found cuando el calificacion no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                </ul>
+                <p>deleteCalificacion</p>
+                <ul>
+                    <li>Identificador de la prueba: testDeleteCalificacion</li>
+                    <li>Título: deleteCalificacion</li>
+                    <li>Descripción: Se prueba que el método deleteCalificacion elimine un calificacion correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado No Content.</li>
+                </ul>
+                <p>deleteCalificacion - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testDeleteCalificacion_NotFound</li>
+                    <li>Título: deleteCalificacion - Not Found</li>
+                    <li>Descripción: Se prueba que el método deleteCalificacion devuelva un código de estado Not Found cuando el calificacion no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                    <h3>CalificacionService</h3>
+                    <p>findById - Calificacion existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindById_Exists</li>
+                        <li>Título: findById - Calificacion existente</li>
+                        <li>Descripción: Se prueba que el método findById encuentre un calificacion existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva un calificacion existente.</li>
+                    </ul>
+                    <p>findById - Calificacion no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindById_NotExists</li>
+                        <li>Título: findById - Calificacion no existente</li>
+                        <li>Descripción: Se prueba que el método findById devuelva null cuando no se encuentra ningún calificacion.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva null.</li>
+                    </ul>
+                    <p>findAll</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindAll</li>
+                        <li>Título: findAll</li>
+                        <li>Descripción: Se prueba que el método findAll devuelva una lista de calificaciones.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva una lista de calificaciones.</li>
+                    </ul>
+                    <p>save</p>
+                    <ul>
+                        <li>Identificador de la prueba: testSave</li>
+                        <li>Título: save</li>
+                        <li>Descripción: Se prueba que el método save guarde un nuevo calificacion correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva el calificacion guardado.</li>
+                    </ul>
+                    <p>update - Calificacion existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testUpdate_Exists</li>
+                        <li>Título: update - Calificacion existente</li>
+                        <li>Descripción: Se prueba que el método update actualice un calificacion existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva el calificacion actualizado.</li>
+                    </ul>
+                    <p>update - Calificacion no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testUpdate_NotExists</li>
+                        <li>Título: update - Calificacion no existente</li>
+                        <li>Descripción: Se prueba que el método update devuelva null cuando el calificacion no existe.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva null.</li>
+                    </ul>
+                    <p>delete - Calificacion existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testDelete_Exists</li>
+                        <li>Título: delete - Calificacion existente</li>
+                        <li>Descripción: Se prueba que el método delete elimine un calificacion existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva verdadero.</li>
+                    </ul>
+                    <p>delete - Calificacion no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testDelete_NotExists</li>
+                        <li>Título: delete - Calificacion no existente</li>
+                        <li>Descripción: Se prueba que el método delete devuelva falso cuando el calificacion no existe.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva falso.</li>
+                    </ul>
+                    <h3>CalificacionDTO</h3>
+                    <!-- Otras pruebas -->
+                    <p>fromEntity</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFromEntity</li>
+                        <li>Título: fromEntity</li>
+                        <li>Descripción: Se prueba que el método fromEntity convierta correctamente una entidad Calificacion a DTO.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva un DTO con los mismos valores que la entidad.</li>
+                    </ul>
+                    <h3>testToEntity</h3>
+                    <p>toEntity</p>
+                    <ul>
+                        <li>Identificador de la prueba: testToEntity</li>
+                        <li>Título: toEntity</li>
+                        <li>Descripción: Se prueba que el método toEntity convierta correctamente un DTO Calificacion a entidad.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva una entidad con los mismos valores que el DTO.</li>
+                    </ul>
+                    <h3>Calificacion</h3>
+                    <p>Getters y Setters</p>
+                    <ul>
+                        <li>Identificador de la prueba: testGettersAndSetters</li>
+                        <li>Título: Getters y Setters</li>
+                        <li>Descripción: Se prueba que los getters y setters de la clase Calificacion funcionen correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que los getters y setters funcionen correctamente.</li>
+                    </ul>
+                    <p>NoArgsConstructor</p>
+                    <ul>
+                        <li>Identificador de la prueba: testNoArgsConstructor</li>
+                        <li>Título: NoArgsConstructor</li>
+                        <li>Descripción: Se prueba que el constructor sin argumentos de la clase Calificacion funcione correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el constructor sin argumentos funcione correctamente.</li>
+                    </ul>
+                    <p>AllArgsConstructor</p>
+                    <ul>
+                        <li>Identificador de la prueba: testAllArgsConstructor</li>
+                        <li>Título: AllArgsConstructor</li>
+                        <li>Descripción: Se prueba que el constructor con todos los argumentos de la clase Calificacion funcione correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el constructor con todos los argumentos funcione correctamente.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="test-case">
+          <div class="card" onclick="toggleCard(this)">
+              <h2>Pruebas Solicitud</h2>
+              <div class="card-content">
+                  <h3>Solicitud Controller</h3>
+                  <p>Constructor</p>
+                  <ul>
+                      <li>Identificador de la prueba: testConstructor</li>
+                      <li>Título: Constructor</li>
+                      <li>Descripción: Se prueba que el constructor de SolicitudController se cree correctamente.</li>
+                      <li>Dependencias de las pruebas: N/A</li>
+                      <li>Resultado: Se espera que el constructor no sea nulo.</li>
+                  </ul>
+                  <p>getAllSolicitudes</p>
+                  <ul>
+                      <li>Identificador de la prueba: testGetAllSolicitudes</li>
+                      <li>Título: getAllSolicitudes</li>
+                      <li>Descripción: Se prueba que el método getAllSolicitudes devuelva una lista de solicitudes.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado OK y la lista de solicitudes.</li>
+                  </ul>
+                  <p>getSolicitudById</p>
+                  <ul>
+                      <li>Identificador de la prueba: testGetSolicitudById</li>
+                      <li>Título: getSolicitudById</li>
+                      <li>Descripción: Se prueba que el método getSolicitudById devuelva una solicitud por su ID.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado OK y la solicitud correspondiente.</li>
+                  </ul>
+                  <p>getSolicitudById - Not Found</p>
+                  <ul>
+                      <li>Identificador de la prueba: testGetSolicitudById_NotFound</li>
+                      <li>Título: getSolicitudById - Not Found</li>
+                      <li>Descripción: Se prueba que el método getSolicitudById devuelva un código de estado Not Found cuando la solicitud no se encuentra.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                  </ul>
+                  <p>createSolicitud</p>
+                  <ul>
+                      <li>Identificador de la prueba: testCreateSolicitud</li>
+                      <li>Título: createSolicitud</li>
+                      <li>Descripción: Se prueba que el método createSolicitud cree una nueva solicitud correctamente.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Created y la solicitud creada.</li>
+                  </ul>
+                  <p>updateSolicitud</p>
+                  <ul>
+                      <li>Identificador de la prueba: testUpdateSolicitud</li>
+                      <li>Título: updateSolicitud</li>
+                      <li>Descripción: Se prueba que el método updateSolicitud actualice una solicitud existente correctamente.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado OK y la solicitud actualizada.</li>
+                  </ul>
+                  <p>updateSolicitud - Not Found</p>
+                  <ul>
+                      <li>Identificador de la prueba: testUpdateSolicitud_NotFound</li>
+                      <li>Título: updateSolicitud - Not Found</li>
+                      <li>Descripción: Se prueba que el método updateSolicitud devuelva un código de estado Not Found cuando la solicitud no se encuentra.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                  </ul>
+                  <p>deleteSolicitud</p>
+                  <ul>
+                      <li>Identificador de la prueba: testDeleteSolicitud</li>
+                      <li>Título: deleteSolicitud</li>
+                      <li>Descripción: Se prueba que el método deleteSolicitud elimine una solicitud correctamente.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado No Content.</li>
+                  </ul>
+                  <p>deleteSolicitud - Not Found</p>
+                  <ul>
+                      <li>Identificador de la prueba: testDeleteSolicitud_NotFound</li>
+                      <li>Título: deleteSolicitud - Not Found</li>
+                      <li>Descripción: Se prueba que el método deleteSolicitud devuelva un código de estado Not Found cuando la solicitud no se encuentra.</li>
+                      <li>Dependencias de las pruebas: Constructor</li>
+                      <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                      <h3>SolicitudService</h3>
+                      <p>findById - Solicitud existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFindById_Exists</li>
+                          <li>Título: findById - Solicitud existente</li>
+                          <li>Descripción: Se prueba que el método findById encuentre una solicitud existente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva una solicitud existente.</li>
+                      </ul>
+                      <p>findById - Solicitud no existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFindById_NotExists</li>
+                          <li>Título: findById - Solicitud no existente</li>
+                          <li>Descripción: Se prueba que el método findById devuelva null cuando no se encuentra ninguna solicitud.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva null.</li>
+                      </ul>
+                      <p>findAll</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFindAll</li>
+                          <li>Título: findAll</li>
+                          <li>Descripción: Se prueba que el método findAll devuelva una lista de solicitudes.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva una lista de solicitudes.</li>
+                      </ul>
+                      <p>save</p>
+                      <ul>
+                          <li>Identificador de la prueba: testSave</li>
+                          <li>Título: save</li>
+                          <li>Descripción: Se prueba que el método save guarde una nueva solicitud correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva la solicitud guardada.</li>
+                      </ul>
+                      <p>update - Solicitud existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testUpdate_Exists</li>
+                          <li>Título: update - Solicitud existente</li>
+                          <li>Descripción: Se prueba que el método update actualice una solicitud existente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva la solicitud actualizada.</li>
+                      </ul>
+                      <p>update - Solicitud no existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testUpdate_NotExists</li>
+                          <li>Título: update - Solicitud no existente</li>
+                          <li>Descripción: Se prueba que el método update devuelva null cuando la solicitud no existe.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva null.</li>
+                      </ul>
+                      <p>delete - Solicitud existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testDelete_Exists</li>
+                          <li>Título: delete - Solicitud existente</li>
+                          <li>Descripción: Se prueba que el método delete elimine una solicitud existente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva verdadero.</li>
+                      </ul>
+                      <p>delete - Solicitud no existente</p>
+                      <ul>
+                          <li>Identificador de la prueba: testDelete_NotExists</li>
+                          <li>Título: delete - Solicitud no existente</li>
+                          <li>Descripción: Se prueba que el método delete devuelva falso cuando la solicitud no existe.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva falso.</li>
+                      </ul>
+                      <h3>SolicitudDTO</h3>
+                      <!-- Otras pruebas -->
+                      <p>fromEntity</p>
+                      <ul>
+                          <li>Identificador de la prueba: testFromEntity</li>
+                          <li>Título: fromEntity</li>
+                          <li>Descripción: Se prueba que el método fromEntity convierta correctamente una entidad Solicitud a DTO.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva un DTO con los mismos valores que la entidad.</li>
+                      </ul>
+                      <h3>testToEntity</h3>
+                      <p>toEntity</p>
+                      <ul>
+                          <li>Identificador de la prueba: testToEntity</li>
+                          <li>Título: toEntity</li>
+                          <li>Descripción: Se prueba que el método toEntity convierta correctamente un DTO Solicitud a entidad.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el método devuelva una entidad con los mismos valores que el DTO.</li>
+                      </ul>
+                      <h3>Solicitud</h3>
+                      <p>Getters y Setters</p>
+                      <ul>
+                          <li>Identificador de la prueba: testGettersAndSetters</li>
+                          <li>Título: Getters y Setters</li>
+                          <li>Descripción: Se prueba que los getters y setters de la clase Solicitud funcionen correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que los getters y setters funcionen correctamente.</li>
+                      </ul>
+                      <p>NoArgsConstructor</p>
+                      <ul>
+                          <li>Identificador de la prueba: testNoArgsConstructor</li>
+                          <li>Título: NoArgsConstructor</li>
+                          <li>Descripción: Se prueba que el constructor sin argumentos de la clase Solicitud funcione correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el constructor sin argumentos funcione correctamente.</li>
+                      </ul>
+                      <p>AllArgsConstructor</p>
+                      <ul>
+                          <li>Identificador de la prueba: testAllArgsConstructor</li>
+                          <li>Título: AllArgsConstructor</li>
+                          <li>Descripción: Se prueba que el constructor con todos los argumentos de la clase Solicitud funcione correctamente.</li>
+                          <li>Dependencias de las pruebas: N/A</li>
+                          <li>Resultado: Se espera que el constructor con todos los argumentos funcione correctamente.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+  
     </section>
   
   </main>

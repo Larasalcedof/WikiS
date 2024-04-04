@@ -6,6 +6,8 @@ body {
     padding: 0;
   }
   
+  
+
   header {
     background-color: #52275a;
     color: #e0e1dd;
@@ -30,9 +32,20 @@ body {
   .pair img {
     max-width: 100%;
     height: auto;
-    max-height: 200px; /* Ajusta esta altura según tus necesidades */
+    max-height: 600px; /* Ajusta esta altura según tus necesidades */
   }
   
+  .pair2 img {
+    width: 100%;
+  max-width: 800px;
+  height: auto;
+  max-height: none;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Ajusta esta altura según tus necesidades */
+  }
+
   .info {
     flex: 1;
     padding-right: 20px;
@@ -41,7 +54,13 @@ body {
   .pair img {
     max-width: 100%;
     height: auto;
-    max-height: 200px; /* Ajusta esta altura según tus necesidades */
+    max-height: 600px; /* Ajusta esta altura según tus necesidades */
+  }
+  .pair2 img {
+    width: 100%;
+  max-width: 800px;
+  height: auto;
+  max-height: none; /* Ajusta esta altura según tus necesidades */
   }
 
   nav a {
@@ -66,18 +85,25 @@ body {
     color: #52275a;
   }
   
-  .pair {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
+
   
   .pair img {
     max-width: 100%;
     height: auto;
-    max-height: 300px; /* Ajusta esta altura según tus necesidades */
+    max-height: 600px; /* Ajusta esta altura según tus necesidades */
   }
+  .pair2 img {
+    width: 100%;
+  max-width: 800px;
+  height: auto;
+  max-height: none;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Ajusta esta altura según tus necesidades */
+  }
+
+  
   
   .footer {
     background-color: #52275a;

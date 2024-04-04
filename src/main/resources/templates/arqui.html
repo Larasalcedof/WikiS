@@ -44,12 +44,197 @@
 
     <section class="models">
       <h2>Modelos</h2>
-      <div class="pair entity-relation">
-        <h3>Entidad/Relación: Diccionario</h3>
-        <!-- Espacio para la imagen del modelo de entidad/relación -->
-        <p>Texto descriptivo para el modelo de entidad/relación.</p>
+      
+      <div style = "align: center">
+        <h3>Diagrama de Componentes</h3>
+        <img th:src="@{~/equipo-1-4/assets/images/DiagramaE.png}" alt="Diagrama de Entidades" style = "align: center">
+        <p>Diagrama Entidad/Relación</p>
       </div>
+      <div class="pair entity-relation">
+        <h3>Usuario</h3>
+        <!-- Espacio para la imagen del modelo de entidad/relación -->
+        
+        <table>
+          <tr>
+            <th>Atributo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>Identificador único del usuario (clave primaria).</td>
+          </tr>
+          <tr>
+            <td>nombre</td>
+            <td>Nombre del usuario.</td>
+          </tr>
+          <tr>
+            <td>rol</td>
+            <td>Rol del usuario (arrendatario o arrendador).</td>
+          </tr>
+          <tr>
+            <td>status</td>
+            <td>Estado del usuario (activo, inactivo, etc.).</td>
+          </tr>
+          <tr>
+            <td>credenciales</td>
+            <td>Relación uno a uno con la entidad Credenciales.</td>
+          </tr>
+        </table>
+        <h3>Credencial</h3>
+        <table>
+          <tr>
+            <th>Atributo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>Identificador único de las credenciales (clave primaria).</td>
+          </tr>
+          <tr>
+            <td>correoElectronico</td>
+            <td>Correo electrónico asociado a las credenciales.</td>
+          </tr>
+          <tr>
+            <td>contrasena</td>
+            <td>Contraseña asociada a las credenciales.</td>
+          </tr>
+        </table>
+        <h3>Propiedad</h3>
+        <table>
+          <tr>
+            <th>Atributo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>Identificador único de la propiedad (clave primaria).</td>
+          </tr>
+          <tr>
+            <td>nombre</td>
+            <td>Nombre de la propiedad.</td>
+          </tr>
+          <tr>
+            <td>descripcion</td>
+            <td>Descripción de la propiedad.</td>
+          </tr>
+          <tr>
+            <td>ubicacion</td>
+            <td>Ubicación de la propiedad.</td>
+          </tr>
+          <tr>
+            <td>costoArrendamiento</td>
+            <td>Costo del arrendamiento de la propiedad.</td>
+          </tr>
+          <tr>
+            <td>disponible</td>
+            <td>Estado de disponibilidad de la propiedad.</td>
+          </tr>
+          <tr>
+            <td>arrendador</td>
+            <td>Relación muchos a uno con la entidad Usuario que representa al arrendador de la propiedad.</td>
+          </tr>
+        </table>
+
+        <h3>Solicitud</h3>
+
+        <table>
+          <tr>
+            <th>Atributo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>Identificador único de la solicitud (clave primaria).</td>
+          </tr>
+          <tr>
+            <td>fechaSolicitud</td>
+            <td>Fecha en que se realizó la solicitud.</td>
+          </tr>
+          <tr>
+            <td>estado</td>
+            <td>Estado de la solicitud.</td>
+          </tr>
+          <tr>
+            <td>arrendatario</td>
+            <td>Relación muchos a uno con la entidad Usuario que representa al arrendatario que realizó la solicitud.</td>
+          </tr>
+          <tr>
+            <td>propiedad</td>
+            <td>Relación muchos a uno con la entidad Propiedad sobre la que se realizó la solicitud.</td>
+          </tr>
+        </table>
+
+        <h3>Pago</h3>
+  
+  <table>
+    <tr>
+      <th>Atributo</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>Identificador único del pago (clave primaria).</td>
+    </tr>
+    <tr>
+      <td>fechaPago</td>
+      <td>Fecha en que se realizó el pago.</td>
+    </tr>
+    <tr>
+      <td>monto</td>
+      <td>Monto del pago.</td>
+    </tr>
+    <tr>
+      <td>estado</td>
+      <td>Estado del pago.</td>
+    </tr>
+    <tr>
+      <td>usuario</td>
+      <td>Relación muchos a uno con la entidad Usuario que realizó el pago.</td>
+    </tr>
+    <tr>
+      <td>propiedad</td>
+      <td>Relación muchos a uno con la entidad Propiedad a la que se refiere el pago.</td>
+    </tr>
+  </table>
+
+  <h3>Calificacion</h3>
+  
+  <table>
+    <tr>
+      <th>Atributo</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>Identificador único de la calificación (clave primaria).</td>
+    </tr>
+    <tr>
+      <td>valoracion</td>
+      <td>Valoración asignada en la calificación.</td>
+    </tr>
+    <tr>
+      <td>comentario</td>
+      <td>Comentario asociado a la calificación.</td>
+    </tr>
+    <tr>
+      <td>fechaCalificacion</td>
+      <td>Fecha en que se realizó la calificación.</td>
+    </tr>
+    <tr>
+      <td>usuario</td>
+      <td>Relación muchos a uno con la entidad Usuario que realizó la calificación.</td>
+    </tr>
+    <tr>
+      <td>propiedad</td>
+      <td>Relación muchos a uno con la entidad Propiedad que fue calificada.</td>
+    </tr>
+  </table>
+
+      </div>
+      
+    
     </section>
+    
 
     <section class="deployment-diagram">
       <h2>Diagrama de Despliegue</h2>

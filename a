@@ -1,0 +1,188 @@
+<div class="test-case">
+        <div class="card" onclick="toggleCard(this)">
+            <h2>Pruebas Calificacion</h2>
+            <div class="card-content">
+                <h3>Calificacion Controller</h3>
+                <p>Constructor</p>
+                <ul>
+                    <li>Identificador de la prueba: testConstructor</li>
+                    <li>Título: Constructor</li>
+                    <li>Descripción: Se prueba que el constructor de CalificacionController se cree correctamente.</li>
+                    <li>Dependencias de las pruebas: N/A</li>
+                    <li>Resultado: Se espera que el constructor no sea nulo.</li>
+                </ul>
+                <p>getAllCalificaciones</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetAllCalificaciones</li>
+                    <li>Título: getAllCalificaciones</li>
+                    <li>Descripción: Se prueba que el método getAllCalificaciones devuelva una lista de calificaciones.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y la lista de calificaciones.</li>
+                </ul>
+                <p>getCalificacionById</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetCalificacionById</li>
+                    <li>Título: getCalificacionById</li>
+                    <li>Descripción: Se prueba que el método getCalificacionById devuelva un calificacion por su ID.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y el calificacion correspondiente.</li>
+                </ul>
+                <p>getCalificacionById - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testGetCalificacionById_NotFound</li>
+                    <li>Título: getCalificacionById - Not Found</li>
+                    <li>Descripción: Se prueba que el método getCalificacionById devuelva un código de estado Not Found cuando el calificacion no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                </ul>
+                <p>createCalificacion</p>
+                <ul>
+                    <li>Identificador de la prueba: testCreateCalificacion</li>
+                    <li>Título: createCalificacion</li>
+                    <li>Descripción: Se prueba que el método createCalificacion cree un nuevo calificacion correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Created y el calificacion creado.</li>
+                </ul>
+                <p>updateCalificacion</p>
+                <ul>
+                    <li>Identificador de la prueba: testUpdateCalificacion</li>
+                    <li>Título: updateCalificacion</li>
+                    <li>Descripción: Se prueba que el método updateCalificacion actualice un calificacion existente correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado OK y el calificacion actualizado.</li>
+                </ul>
+                <p>updateCalificacion - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testUpdateCalificacion_NotFound</li>
+                    <li>Título: updateCalificacion - Not Found</li>
+                    <li>Descripción: Se prueba que el método updateCalificacion devuelva un código de estado Not Found cuando el calificacion no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                </ul>
+                <p>deleteCalificacion</p>
+                <ul>
+                    <li>Identificador de la prueba: testDeleteCalificacion</li>
+                    <li>Título: deleteCalificacion</li>
+                    <li>Descripción: Se prueba que el método deleteCalificacion elimine un calificacion correctamente.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado No Content.</li>
+                </ul>
+                <p>deleteCalificacion - Not Found</p>
+                <ul>
+                    <li>Identificador de la prueba: testDeleteCalificacion_NotFound</li>
+                    <li>Título: deleteCalificacion - Not Found</li>
+                    <li>Descripción: Se prueba que el método deleteCalificacion devuelva un código de estado Not Found cuando el calificacion no se encuentra.</li>
+                    <li>Dependencias de las pruebas: Constructor</li>
+                    <li>Resultado: Se espera que el método devuelva un código de estado Not Found.</li>
+                    <h3>CalificacionService</h3>
+                    <p>findById - Calificacion existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindById_Exists</li>
+                        <li>Título: findById - Calificacion existente</li>
+                        <li>Descripción: Se prueba que el método findById encuentre un calificacion existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva un calificacion existente.</li>
+                    </ul>
+                    <p>findById - Calificacion no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindById_NotExists</li>
+                        <li>Título: findById - Calificacion no existente</li>
+                        <li>Descripción: Se prueba que el método findById devuelva null cuando no se encuentra ningún calificacion.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva null.</li>
+                    </ul>
+                    <p>findAll</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFindAll</li>
+                        <li>Título: findAll</li>
+                        <li>Descripción: Se prueba que el método findAll devuelva una lista de calificaciones.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva una lista de calificaciones.</li>
+                    </ul>
+                    <p>save</p>
+                    <ul>
+                        <li>Identificador de la prueba: testSave</li>
+                        <li>Título: save</li>
+                        <li>Descripción: Se prueba que el método save guarde un nuevo calificacion correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva el calificacion guardado.</li>
+                    </ul>
+                    <p>update - Calificacion existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testUpdate_Exists</li>
+                        <li>Título: update - Calificacion existente</li>
+                        <li>Descripción: Se prueba que el método update actualice un calificacion existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva el calificacion actualizado.</li>
+                    </ul>
+                    <p>update - Calificacion no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testUpdate_NotExists</li>
+                        <li>Título: update - Calificacion no existente</li>
+                        <li>Descripción: Se prueba que el método update devuelva null cuando el calificacion no existe.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva null.</li>
+                    </ul>
+                    <p>delete - Calificacion existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testDelete_Exists</li>
+                        <li>Título: delete - Calificacion existente</li>
+                        <li>Descripción: Se prueba que el método delete elimine un calificacion existente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva verdadero.</li>
+                    </ul>
+                    <p>delete - Calificacion no existente</p>
+                    <ul>
+                        <li>Identificador de la prueba: testDelete_NotExists</li>
+                        <li>Título: delete - Calificacion no existente</li>
+                        <li>Descripción: Se prueba que el método delete devuelva falso cuando el calificacion no existe.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva falso.</li>
+                    </ul>
+                    <h3>CalificacionDTO</h3>
+                    <!-- Otras pruebas -->
+                    <p>fromEntity</p>
+                    <ul>
+                        <li>Identificador de la prueba: testFromEntity</li>
+                        <li>Título: fromEntity</li>
+                        <li>Descripción: Se prueba que el método fromEntity convierta correctamente una entidad Calificacion a DTO.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva un DTO con los mismos valores que la entidad.</li>
+                    </ul>
+                    <h3>testToEntity</h3>
+                    <p>toEntity</p>
+                    <ul>
+                        <li>Identificador de la prueba: testToEntity</li>
+                        <li>Título: toEntity</li>
+                        <li>Descripción: Se prueba que el método toEntity convierta correctamente un DTO Calificacion a entidad.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el método devuelva una entidad con los mismos valores que el DTO.</li>
+                    </ul>
+                    <h3>Calificacion</h3>
+                    <p>Getters y Setters</p>
+                    <ul>
+                        <li>Identificador de la prueba: testGettersAndSetters</li>
+                        <li>Título: Getters y Setters</li>
+                        <li>Descripción: Se prueba que los getters y setters de la clase Calificacion funcionen correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que los getters y setters funcionen correctamente.</li>
+                    </ul>
+                    <p>NoArgsConstructor</p>
+                    <ul>
+                        <li>Identificador de la prueba: testNoArgsConstructor</li>
+                        <li>Título: NoArgsConstructor</li>
+                        <li>Descripción: Se prueba que el constructor sin argumentos de la clase Calificacion funcione correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el constructor sin argumentos funcione correctamente.</li>
+                    </ul>
+                    <p>AllArgsConstructor</p>
+                    <ul>
+                        <li>Identificador de la prueba: testAllArgsConstructor</li>
+                        <li>Título: AllArgsConstructor</li>
+                        <li>Descripción: Se prueba que el constructor con todos los argumentos de la clase Calificacion funcione correctamente.</li>
+                        <li>Dependencias de las pruebas: N/A</li>
+                        <li>Resultado: Se espera que el constructor con todos los argumentos funcione correctamente.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
